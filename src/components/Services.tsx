@@ -1,5 +1,6 @@
 import { ShoppingCart, BarChart3, Target, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -26,10 +27,12 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <Button variant="outline" className="text-accent border-accent hover:bg-accent hover:text-primary">
-              View All My Services
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link to="/services">
+              <Button variant="outline" className="text-accent border-accent hover:bg-accent hover:text-primary">
+                View All My Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Services <span className="text-accent">I Provide</span>
