@@ -1,5 +1,6 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const projects = [
@@ -30,10 +31,12 @@ const Portfolio = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             My Latest <span className="text-accent">Projects</span>
           </h2>
-          <Button variant="outline" className="text-accent border-accent hover:bg-accent hover:text-primary">
-            View My Projects
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link to="/projects">
+            <Button variant="outline" className="text-accent border-accent hover:bg-accent hover:text-primary">
+              View My Projects
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
 
         {/* Projects Grid */}
